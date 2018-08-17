@@ -1,0 +1,28 @@
+/*上移按钮和下移按钮样式 --- start*/
+
+.toup {
+    background: url(updown.png) 0px -29px;
+    height: 17px;
+    width: 20px;
+    display: block;
+    margin: 6px auto;
+}
+
+.toup:hover {
+    background: url(updown.png);
+}
+
+.todown {
+    background: url(updown.png) -42px -29px;
+    height: 17px;
+    width: 20px;
+    display: block;
+    margin: 6px auto;
+}
+
+.todown:hover {
+    background: url(updown.png) -42px -3px;
+}
+
+/*上移按钮和下移按钮样式 --- end*/
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <style type="text/css">
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft Yahei", "微软雅黑", Tahoma, Arial, STHeiti, sans-serif;
+            font-size: 14px;
+            background: #f8f8f8;
+        }
+
+        #warp {
+            width: 200px;
+            height: 100px;
+            margin: 100px auto 0;
+            border: 1px solid #dddddd;
+            border-top: 1px solid #ebebeb;
+            border-bottom: 1px solid #b7b7b7;
+            background-color: white;
+            position: relative;
+            overflow: visible;
+            border-radius: 4px;
+            box-shadow: 0 1px 1px #d3d1d1;
+        }
+
+        h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #baiduTxt {
+            width: 150px;
+            margin: 25px;
+        }
+
+        li {
+            margin-left: 50px;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+
+        //利用JSONP实现搜索联想，当在搜索框中输入关键词时，会出现实时对应的联想词，这些联想词数据来自另一个域名http://suggestion.baidu.com/，因此可以利用JSONP实现跨域调用数据
+        window.onload = function () {
+            var oTxt = document.getElementById('baiduTxt');
+            var oUl = document.getElementById('baiduUl');
+            var oScript = null;
+            oTxt.onkeyup = function () {
+                oUl.innerHTML = '';
+                //避免造成代码冗余，出现众多script标签（由于每输入一个字符，就会动态生成script标签，因此每次需要清除上一次遗留下的script标签）
+                if (oScript) {
+                    document.body.removeChild(oScript);
+                }
+                oScript = document.createElement('script');
+                //其中‘wd’是搜索的关键字，‘cb’是一个回调函数，该回调函数是我们取到数据要后执行的函数，oScript.src中cb=baidu即表示取到数据后执行baidu函数
+                oScript.src = 'http://suggestion.baidu.com/su?wd=' + oTxt.value + '&p=3&cb=baidu&from=superpage';
+                document.body.appendChild(oScript);
+            }
+        };
+        //回调时调用的函数，将取得的联想词展示出来
+        function baidu(json) {
+            var oUl = document.getElementById('baiduUl');
+            for (var i = 0; i < json.s.length; i++) {
+                var oLi = document.createElement('li');
+                oLi.innerHTML = json['s'][i];
+                oUl.appendChild(oLi);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+<div id="warp">
+    <h2>百度搜索联想</h2>
+    <input type="text" id="baiduTxt"/>
+    <ul id="baiduUl">
+    </ul>
+</div>
+</body>
+</html>

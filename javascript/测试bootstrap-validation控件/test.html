@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap-validation.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#testForm').validation();
+        });
+    </script>
+</head>
+<body>
+<form class="form-horizontal" id="testForm">
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">邮箱</label>
+
+        <div class="controls">
+            <input type="text" id="inputEmail" check-type="mail" mail-message="邮箱格式不正确！">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputPassword">密码</label>
+
+        <div class="controls">
+            <input type="password" id="inputPassword" check-type="required" required-message="密码不能为空！">
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">登录</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

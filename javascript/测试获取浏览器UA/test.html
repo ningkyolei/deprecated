@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>UA Test</title>
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+
+function GetUa()
+{
+$("#appCodeName").html(navigator.appCodeName);
+$("#appMinorVersion").html(navigator.appMinorVersion);
+$("#appName").html(navigator.appName);
+$("#appVersion").html(navigator.appVersion);
+$("#browserLanguage").html(navigator.browserLanguage);
+$("#cookieEnabled").html(navigator.cookieEnabled);
+$("#cpuClass").html(navigator.cpuClass);
+$("#onLine").html(navigator.onLine);
+$("#platform").html(navigator.platform);
+$("#systemLanguage").html(navigator.systemLanguage);
+$("#userAgent").html(navigator.userAgent);
+$("#userLanguage").html(navigator.userLanguage);
+}
+
+</script>
+</head>
+<body onLoad="GetUa()">
+<table width="100%" border="1">
+  <tr>
+    <td>返回浏览器的代码名</td>
+    <td>appCodeName</td>
+    <td id="appCodeName">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回浏览器的次级版本</td>
+    <td>appMinorVersion </td>
+    <td id="appMinorVersion">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回浏览器的名称</td>
+    <td>appName </td>
+    <td id="appName">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回浏览器的平台和版本信息</td>
+    <td>appVersion</td>
+    <td id="appVersion">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回当前浏览器的语言</td>
+    <td>browserLanguage </td>
+    <td id="browserLanguage">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回指明浏览器中是否启用 cookie 的布尔值</td>
+    <td>cookieEnabled</td>
+    <td id="cookieEnabled">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回浏览器系统的 CPU 等级</td>
+    <td>cpuClass</td>
+    <td id="cpuClass">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回指明系统是否处于脱机模式的布尔值</td>
+    <td>onLine</td>
+    <td id="onLine">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回运行浏览器的操作系统平台</td>
+    <td>platform</td>
+    <td id="platform">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回 OS 使用的默认语言</td>
+    <td>systemLanguage</td>
+    <td id="systemLanguage">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回由客户机发送服务器的 user-agent 头部的值</td>
+    <td>userAgent</td>
+    <td id="userAgent">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>返回 OS 的自然语言设置</td>
+    <td>userLanguage</td>
+    <td id="userLanguage">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

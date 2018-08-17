@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+    <link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/jquery.json-2.4.min.js"></script>
+    <script src="lib/jquery.easing.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap3-typeahead.js"></script>
+    <script src="lib/lyn.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var products = [
+                {
+                    id: '0',
+                    name: "Deluxe Bicycle",
+                    price: 499.98
+                },
+                {
+                    id: '1',
+                    name: "Super Deluxe Trampoline",
+                    price: 134.99
+                },
+                {
+                    id: '2',
+                    name: "Super Duper Scooter",
+                    price: 49.95
+                }
+            ];
+
+            var options = {};
+            options.source = function (query, process) {
+                //在这里设置一个字符串数组的数据源
+                var list = _.map(products, function (product) {
+                    return product.id;
+                });
+                process(list);
+            };
+            options.items = 10;
+            options.matcher = function (item) {
+                //在这里设置查找的匹配方法
+                var id = item;
+                var entity = _.find(products, function (m) {
+                    return m.id === id;
+                });
+
+                var name = entity.name.toLowerCase();
+                var query = this.query.toLowerCase();
+                var flag = name.indexOf(query) > -1;
+                return flag;
+            };
+            options.minLength = 0;
+            options.highlighter = function (item) {
+                //在这里设置每一个选项要显示的格式
+                var id = item;
+                var entity = _.find(products, function (m) {
+                    return m.id === id;
+                });
+
+                var text = lyn.string.format('{0} {1} (${2})', id, entity.name, entity.price);
+                return text;
+            };
+            options.updater = function (item) {
+                //在这里设置当用户选择某一个选项时要执行的操作
+                var id = item;
+                var entity = _.find(products, function (m) {
+                    return m.id === id;
+                });
+                return entity.name;
+            };
+
+            $('#test').typeahead(options);
+        });
+    </script>
+
+</head>
+<body>
+<input id="test" type="text">
+</body>
+</html>

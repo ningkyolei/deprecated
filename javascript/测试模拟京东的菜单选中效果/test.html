@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+    <link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .bg-color-green {
+            background-color: greenyellow;
+        }
+
+        .bg-color-yellow {
+            background-color: #ffff00;
+        }
+
+        .bg-color-blue {
+            background-color: #2aabd2;
+        }
+
+        .menu-select-module-selected {
+            background-color: red;
+            height: 5px;
+            width: 38px;
+
+            position: absolute;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var left = $('label.bg-color-yellow').offset().left;
+            $('.menu-select-module-selected').css('left', left);
+
+            $('.menu').click(function () {
+                var left = $(this).offset().left;
+                $('.menu-select-module-selected').animate({left: left});
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+<div class="row text-center">
+    <div class="col-lg-6 text-right bg-color-green">
+        <label class="bg-color-yellow menu">菜单1</label>
+    </div>
+    <div class="col-lg-6 text-left bg-color-green">
+        <label class="bg-color-blue menu">菜单2</label>
+    </div>
+</div>
+<div class="menu-select-module-selected"></div>
+</body>
+</html>

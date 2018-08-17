@@ -1,0 +1,1 @@
+console.log("load script1.js");

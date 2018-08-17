@@ -1,0 +1,12 @@
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\DemoForTest.exe
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\DemoForTest.pdb
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\BarcodeLib.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\log4net.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\LynLib.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\bin\Debug\MySql.Data.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.MainForm.resources
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.Properties.Resources.resources
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.csproj.GenerateResource.Cache
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.exe
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.pdb
+D:\Projects\测试项目\测试ReadProcessMemory的使用\DemoForTest\obj\Debug\DemoForTest.csprojResolveAssemblyReference.cache

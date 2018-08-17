@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>loading动画加载进度条效果</title>
+
+    <link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="lib/lyn-loading/loading.css" rel="stylesheet"/>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+    <script src="lib/lyn.js"></script>
+
+    <script src="lib/lyn-loading/loading.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btn-show').click(function () {
+                lynLoading.show();
+            });
+            $('#btn-hide').click(function () {
+                lynLoading.hide();
+            });
+        });
+    </script>
+</head>
+
+<body style="background:#000; ">
+<div class="container">
+    <a id="btn-show" class="btn btn-primary">show</a>
+    <a id="btn-hide" class="btn btn-primary">hide</a>
+</div>
+</body>
+</html>

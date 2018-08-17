@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ajaxSetup = function () {
+                var settings = {};
+                settings.beforeSend = function (xhr, settings) {
+                    //发送请求前触发
+                    taskPush();
+                };
+                settings.complete = function (xhr, status) {
+                    //完成请求后触发。即在success或error触发后触发
+                    taskPop();
+                };
+                $.ajaxSetup(settings);
+            };
+            var ajaxRequest = function () {
+                var settings = {};
+                settings.type = 'post';
+                settings.dataType = "json";
+                settings.url = 'Interface/GetTestData.ashx';
+                settings.success = function (data) {
+                };
+                settings.error = function (msg) {
+                };
+                $.ajax(settings);
+            };
+
+            var taskCount = 0;
+            var taskPush = function () {
+                taskCount++;
+                console.log('taskCount=' + taskCount);
+            };
+            var taskPop = function () {
+                taskCount--;
+                console.log('taskCount=' + taskCount);
+                if (taskCount == 0) {
+                    setTimeout(function () {
+                        allAjaxRequestCompleted();
+                    }, 0);
+
+                }
+            };
+
+            var allAjaxRequestCompleted = function () {
+                console.log('call allAjaxRequestCompleted!');
+            };
+
+            ajaxSetup();
+            for (var i = 0; i < 10; i++) {
+                console.log('准备调用第' + (i + 1) + '次异步请求');
+                ajaxRequest();
+            }
+
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "测试在Winform上生成图片验证码", "测试在Winform上生成图片验证码\测试在Winform上生成图片验证码.csproj", "{CFF604C0-3A84-491C-A46A-D1473D7F47EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFF604C0-3A84-491C-A46A-D1473D7F47EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF604C0-3A84-491C-A46A-D1473D7F47EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF604C0-3A84-491C-A46A-D1473D7F47EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF604C0-3A84-491C-A46A-D1473D7F47EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

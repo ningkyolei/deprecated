@@ -1,0 +1,10 @@
+.ning-alert {
+    opacity: 0;
+    background-color: #000000;
+    color: #ffffff;
+    position: fixed;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 10px;
+    bottom: 20%;
+}

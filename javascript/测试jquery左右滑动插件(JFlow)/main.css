@@ -1,0 +1,30 @@
+.slide-container {
+    width: 680px;
+    border: 1px solid #999;
+    margin: 0 auto;
+}
+
+#nav-controller {
+    line-height: 35px;
+    margin-top: -35px;
+    background-color: #333;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+#nav-controller span {
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff
+}
+
+#nav-controller .nav-btn-selected {
+    background: #d3d3d3;
+    color: #333
+}
+

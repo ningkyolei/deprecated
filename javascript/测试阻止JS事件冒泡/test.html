@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        function aaaclick() {
+            alert("td click");
+        }
+        function bbbclick(evt) {
+            alert("td click");
+            if (window.event) {
+                event.cancelBubble = true;
+            } else if (evt) {
+                evt.stopPropagation();
+            }
+        }
+        function trclick() {
+            alert("tr click");
+        }
+
+        function tableclick() {
+            alert("table click");
+        }
+    </script>
+
+    <style type="text/css">
+        <!--
+        .tab {
+            border: 1px solid #0066FF;
+            cellpadding: 0px;
+            cellspacing: 0px;
+        }
+
+        .tab td {
+            border: 1px solid #0066FF;
+        }
+
+        -->
+    </style>
+</head>
+
+<body>
+<p>点击aaaa会触发上层的onclick事件，点击bbbb不会触发上层onclick事件</p>
+<table width="204" onclick="tableclick()" class="tab">
+    <tr>
+        <td width="96"></td>
+        <td width="96"></td>
+    </tr>
+    <tr onclick="trclick()">
+        <td onclick="aaaclick()">aaaa</td>
+        <td onclick="bbbclick(event)">bbbbb</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

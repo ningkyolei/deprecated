@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('input[type="button"][value="检测"]').click(function () {
+                var $label = $('label');
+                var value = $('input[type="text"]').val();
+
+                if (mobileHelper.isDxMobile(value)) {
+                    $label.html('电信');
+                } else if (mobileHelper.isYdMobile(value)) {
+                    $label.html('移动');
+                } else if (mobileHelper.isLtMobile(value)) {
+                    $label.html('联通');
+                } else {
+                    $label.html('手机号码不合法');
+                }
+            });
+
+            var mobileHelper = (function () {
+                /*
+                 电信：133 153 155 180 189
+                 移动：134-139 151 188
+                 联通：130-132 156
+                 */
+                return {
+                    isDxMobile: function (value) {
+                        var reg = /^(133|153|155|180|189)\d{8}$/;
+                        return reg.test(value);
+                    },
+                    isYdMobile: function (value) {
+                        var reg = /^(134|135|136|137|138|139|151|188)\d{8}$/;
+                        return reg.test(value);
+                    },
+                    isLtMobile: function (value) {
+                        var reg = /^(130|131|132|156)\d{8}$/;
+                        return reg.test(value);
+                    },
+                    isMobile: function () {
+                        var flag = false;
+                        if (mobileHelper.isDxMobile(value)) {
+                            flag = true;
+                        } else if (mobileHelper.isYdMobile(value)) {
+                            flag = true;
+                        } else if (mobileHelper.isLtMobile(value)) {
+                            flag = true;
+                        }
+                        return flag;
+                    }
+                };
+            })();
+
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+<input type="text" value="">
+<input type="button" value="检测">
+<label></label>
+
+<div>
+    <p>13680233930</p>
+
+    <p>18088752211</p>
+
+    <p></p>
+</div>
+</body>
+</html>

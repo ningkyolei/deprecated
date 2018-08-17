@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+    <!--&lt;!&ndash;example1 start&ndash;&gt;-->
+    <!--<script src="tempJsFiles/script1.js"></script>-->
+    <!--<script src="tempJsFiles/script2-a.js"></script>-->
+    <!--<script src="tempJsFiles/script2-b.js"></script>-->
+    <!--<script type="text/javascript">-->
+    <!--initScript1();-->
+    <!--initScript2();-->
+
+    <!--function initScript1() {-->
+    <!--console.log("initScript1");-->
+    <!--}-->
+    <!--function initScript2() {-->
+    <!--console.log("initScript2");-->
+    <!--}-->
+    <!--</script>-->
+    <!--<script src="tempJsFiles/script3.js"></script>-->
+    <!--<script type="text/javascript">-->
+    <!--initScript3();-->
+
+    <!--function initScript3() {-->
+    <!--console.log("initScript3");-->
+    <!--}-->
+    <!--</script>-->
+    <!--&lt;!&ndash;example1 end&ndash;&gt;-->
+
+    <!--example2 start-->
+    <script src="LAB.js"></script>
+    <script type="text/javascript">
+        $LAB.script("tempJsFiles/script1.js").wait()
+                .script("tempJsFiles/script2-a.js")
+                .script("tempJsFiles/script2-b.js")
+                .wait(function () {
+                    initScript1();
+                    initScript2();
+
+                    function initScript1() {
+                        console.log("initScript1");
+                    }
+
+                    function initScript2() {
+                        console.log("initScript2");
+                    }
+                })
+                .script("tempJsFiles/script3.js")
+                .wait(function () {
+                    initScript3();
+
+                    function initScript3() {
+                        console.log("initScript3");
+                    }
+                });
+    </script>
+    <!--example2 end-->
+
+</head>
+<body>
+
+</body>
+</html>

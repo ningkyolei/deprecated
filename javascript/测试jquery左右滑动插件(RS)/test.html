@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="lib/rs-plugin/css/settings.css" type="text/css" media="screen"/>
+
+    <style>
+        .banner-container {
+            border-bottom: 1px solid #eee;
+            width: 100% !important;
+            position: relative;
+            padding: 0;
+            max-height: 400px !important;
+            overflow: hidden;
+        }
+    </style>
+
+    <script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="lib/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.banner-content').revolution({
+                delay: 9000,
+                startheight: 350,
+                startwidth: 1000,
+
+                hideThumbs: 10,
+
+                thumbWidth: 100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
+                thumbHeight: 50,
+                thumbAmount: 5,
+
+                navigationType: "both",					//bullet, thumb, none, both		(No Thumbs In FullWidth Version !)
+                navigationArrows: "verticalcentered",		//nexttobullets, verticalcentered, none
+                navigationStyle: "round",				//round,square,navbar
+
+                touchenabled: "on",						// Enable Swipe Function : on/off
+                onHoverStop: "on",						// Stop Banner Timet at Hover on Slide on/off
+
+                navOffsetHorizontal: 0,
+                navOffsetVertical: 20,
+
+                stopAtSlide: -1,
+                stopAfterLoops: -1,
+
+                shadow: 1,								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
+                fullWidth: "on"							// Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+            });
+        })
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+<div class="banner-container">
+    <div class="banner-content">
+        <ul>
+            <!-- THE 1 SLIDE -->
+            <li data-transition="slidehorizontal" data-slotamount="7" data-masterspeed="300" data-delay="5000">
+                <img src="img/bg-1.png">
+            </li>
+            <!-- THE 2 SLIDE -->
+            <li data-transition="papercut" data-slotamount="7">
+                <img src="img/bg-2.png">
+            </li>
+            <!-- THE 3 SLIDE -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300">
+                <img src="img/bg-3.png">
+            </li>
+            <!-- THE 4 SLIDE -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300">
+                <img src="img/bg-4.png">
+            </li>
+            <!-- THE 5 SLIDE -->
+            <li data-transition="papercut" data-slotamount="7" data-masterspeed="300">
+                <img src="img/bg-5.png">
+            </li>
+            <!-- THE 6 SLIDE -->
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="300">
+                <img src="img/bg-6.png">
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+</body>
+
+</html>

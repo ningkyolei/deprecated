@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+    <link href="main.css" rel="stylesheet"/>
+
+    <script src="lib/jquery-1.11.0.min.js"></script>
+    <script src="jquery.flow.1.2.auto.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#tab-slide-controller").jFlow({
+                slides: "#tab-slide",
+                controller: ".jFlowControl",
+                slideWrapper: "#tab-jFlowSlide",
+                selectedWrapper: "jFlowSelected",
+                width: "680px",
+                height: "275px",
+                prev: ".jFlowPrev",
+                next: ".jFlowNext"
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div class="tab-slide-container">
+    <ul id="tab-slide-controller">
+        <li class="jFlowPrev"> <</li>
+        <li class="jFlowControl jFlowSelected">服务</li>
+        <li class="jFlowControl">案例</li>
+        <li class="jFlowControl">文章</li>
+        <li class="jFlowNext"> ></li>
+    </ul>
+    <div id="tab-jFlowSlide">
+        <div id="tab-slide">
+            <div>
+                aaa
+            </div>
+            <div>
+                bbb
+            </div>
+            <div>
+                ccc
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

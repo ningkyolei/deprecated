@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFF604C0-3A84-491C-A46A-D1473D7F47EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>测试ChromeWebBrowser.net</RootNamespace>
+    <AssemblyName>测试ChromeWebBrowser.net</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="cwber, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL Files\cwber.dll</HintPath>
+    </Reference>
+    <Reference Include="libfuncs, Version=1.2.5131.39657, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL Files\libfuncs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Others\DataItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DLL Files\locales\am.pak" />
+    <None Include="DLL Files\locales\ar.pak" />
+    <None Include="DLL Files\locales\bg.pak" />
+    <None Include="DLL Files\locales\bn.pak" />
+    <None Include="DLL Files\locales\ca.pak" />
+    <None Include="DLL Files\locales\cs.pak" />
+    <None Include="DLL Files\locales\da.pak" />
+    <None Include="DLL Files\locales\de.pak" />
+    <None Include="DLL Files\locales\el.pak" />
+    <None Include="DLL Files\locales\en-GB.pak" />
+    <None Include="DLL Files\locales\en-US.pak" />
+    <None Include="DLL Files\locales\es-419.pak" />
+    <None Include="DLL Files\locales\es.pak" />
+    <None Include="DLL Files\locales\et.pak" />
+    <None Include="DLL Files\locales\fa.pak" />
+    <None Include="DLL Files\locales\fi.pak" />
+    <None Include="DLL Files\locales\fil.pak" />
+    <None Include="DLL Files\locales\fr.pak" />
+    <None Include="DLL Files\locales\gu.pak" />
+    <None Include="DLL Files\locales\he.pak" />
+    <None Include="DLL Files\locales\hi.pak" />
+    <None Include="DLL Files\locales\hr.pak" />
+    <None Include="DLL Files\locales\hu.pak" />
+    <None Include="DLL Files\locales\id.pak" />
+    <None Include="DLL Files\locales\it.pak" />
+    <None Include="DLL Files\locales\ja.pak" />
+    <None Include="DLL Files\locales\kn.pak" />
+    <None Include="DLL Files\locales\ko.pak" />
+    <None Include="DLL Files\locales\lt.pak" />
+    <None Include="DLL Files\locales\lv.pak" />
+    <None Include="DLL Files\locales\ml.pak" />
+    <None Include="DLL Files\locales\mr.pak" />
+    <None Include="DLL Files\locales\ms.pak" />
+    <None Include="DLL Files\locales\nb.pak" />
+    <None Include="DLL Files\locales\nl.pak" />
+    <None Include="DLL Files\locales\pl.pak" />
+    <None Include="DLL Files\locales\pt-BR.pak" />
+    <None Include="DLL Files\locales\pt-PT.pak" />
+    <None Include="DLL Files\locales\ro.pak" />
+    <None Include="DLL Files\locales\ru.pak" />
+    <None Include="DLL Files\locales\sk.pak" />
+    <None Include="DLL Files\locales\sl.pak" />
+    <None Include="DLL Files\locales\sr.pak" />
+    <None Include="DLL Files\locales\sv.pak" />
+    <None Include="DLL Files\locales\sw.pak" />
+    <None Include="DLL Files\locales\ta.pak" />
+    <None Include="DLL Files\locales\te.pak" />
+    <None Include="DLL Files\locales\th.pak" />
+    <None Include="DLL Files\locales\tr.pak" />
+    <None Include="DLL Files\locales\uk.pak" />
+    <None Include="DLL Files\locales\vi.pak" />
+    <None Include="DLL Files\locales\zh-CN.pak" />
+    <None Include="DLL Files\locales\zh-TW.pak" />
+    <None Include="Doc\ChromeWebBrowser.net_1.0.3.rar" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DLL Files\avcodec-54.dll" />
+    <Content Include="DLL Files\avformat-54.dll" />
+    <Content Include="DLL Files\avutil-51.dll" />
+    <Content Include="DLL Files\cwber.dll" />
+    <Content Include="DLL Files\D3DCompiler_43.dll" />
+    <Content Include="DLL Files\D3DX9_43.dll" />
+    <Content Include="DLL Files\icudt.dll" />
+    <Content Include="DLL Files\libcef.dll" />
+    <Content Include="DLL Files\libEGL.dll" />
+    <Content Include="DLL Files\libfuncs.dll" />
+    <Content Include="DLL Files\libGLESv2.dll" />
+    <Content Include="DLL Files\System.Data.SQLite.dll" />
+    <Content Include="DLL Files\System.Data.SQLite.Linq.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,12 @@
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\测试ReadProcessMemory的使用.exe
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\测试ReadProcessMemory的使用.pdb
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\BarcodeLib.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\log4net.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\LynLib.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\bin\Debug\MySql.Data.dll
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.MainForm.resources
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.Properties.Resources.resources
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.csproj.GenerateResource.Cache
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.exe
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.pdb
+D:\Projects\测试项目\测试ReadProcessMemory的使用\测试ReadProcessMemory的使用\obj\Debug\测试ReadProcessMemory的使用.csprojResolveAssemblyReference.cache

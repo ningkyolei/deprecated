@@ -1,0 +1,12 @@
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.csprojResolveAssemblyReference.cache
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.Properties.Resources.resources
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.csproj.GenerateResource.Cache
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.MainForm.resources
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\测试ChromeWebBrowser.net.exe
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\测试ChromeWebBrowser.net.pdb
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\cwber.dll
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\libfuncs.dll
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\System.Data.SQLite.dll
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.exe
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\obj\Debug\测试ChromeWebBrowser.net.pdb
+D:\Projects\测试项目\测试ChromeWebBrowser.net\测试ChromeWebBrowser.net\bin\Debug\测试ChromeWebBrowser.net.exe.config

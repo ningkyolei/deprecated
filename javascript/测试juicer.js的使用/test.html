@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="juicer-min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            example1();
+            example2();
+            example3();
+        });
+
+        function example1() {
+            var list = [
+                {name: '小猪', price: 11},
+                {name: '小猫', price: 12},
+                {name: '小狗', price: 13},
+                {name: '小鸡', price: 14},
+                {name: '小鸭', price: 15}
+            ];
+            var tpl = $('script[type="text/tpl-example1"]').html();
+            var html = juicer(tpl, list);
+            $('#example1 p').html(html);
+        }
+
+        function example2() {
+            var data = {
+                list: [
+                    {name: ' guokai', show: true},
+                    {name: ' benben', show: false},
+                    {name: ' dierbaby', show: true}
+                ],
+                blah: [
+                    {num: 1},
+                    {num: 2},
+                    {num: 3, inner: [
+                        {'time': '15:00'},
+                        {'time': '16:00'},
+                        {'time': '17:00'},
+                        {'time': '18:00'}
+                    ]},
+                    {num: 4}
+                ]
+            };
+
+            var tpl = $('script[type="text/tpl-example2"]').html();
+            var html = juicer(tpl, data);
+            $('#example2 p').html(html);
+        }
+
+        function example3() {
+            var list = [
+                {name: '小猪', price: 11},
+                {name: '小猫', price: 12},
+                {name: '小狗', price: 13},
+                {name: '小鸡', price: 14},
+                {name: '小鸭', price: 15}
+            ];
+            var tpl = $('script[type="text/tpl-example1"]').html();
+            var compiledTpl = juicer(tpl);
+            var html = compiledTpl.render(list);
+            $('#example3 p').html(html);
+        }
+
+    </script>
+</head>
+<body>
+<div id="example1">
+    <h1>example1</h1>
+
+    <p></p>
+</div>
+<div id="example2">
+    <h1>example2</h1>
+
+    <p></p>
+</div>
+<div id="example3">
+    <h1>example3</h1>
+
+    <p></p>
+</div>
+
+<script type="text/tpl-example1">
+    <table>
+        <tr>
+            <th>编号</th>
+            <th>名称</th>
+            <th>价格</th>
+        </tr>
+        {@each _ as item,index}
+        <tr>
+            <td>$${parseInt(index) + 1}</td>
+            <td>$${item.name}</td>
+            <td>$${item.price}</td>
+        </tr>
+        {@/each}
+    </table>
+</script>
+<script type="text/tpl-example2">
+    <ul>
+        {@each list as it,index}
+        <li>${it.name} (index: ${index})</li>
+        {@/each}
+        {@each blah as it}
+        <li>
+            num: ${it.num} <br/>
+            {@if it.num==3}
+            {@each it.inner as it2}
+            ${it2.time} <br/>
+            {@/each}
+            {@/if}
+        </li>
+        {@/each}
+    </ul>
+</script>
+
+</body>
+</html>

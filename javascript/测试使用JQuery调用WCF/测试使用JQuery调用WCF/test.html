@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+    <link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/jquery.json-2.4.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function callServer() {
+                var id = 111;
+                var title = '222';
+                var content = '333';
+                $.ajax({
+                    type: 'post',
+                    url: '/WCFservice.svc/InsertRow',
+                    contentType: 'text/json',
+                    data: '{"id":' + id + ',"title":"' + title + '","content":"' + content + '"}',
+                    success: function (msg) {
+                        //var a = eval('(' + msg + ')');
+                        var a = msg;
+                        if (String(a.d).length > 0) { alert(a.d); }
+                        else { alert("服务器超时"); }
+                    },
+                    error: function () {
+                        debugger;
+                    }
+                });
+            }
+
+            callServer();
+        });
+    </script>
+
+</head>
+<body>
+</body>
+</html>

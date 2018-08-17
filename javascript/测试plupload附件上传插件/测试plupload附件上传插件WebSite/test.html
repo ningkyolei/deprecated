@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/plupload/plupload.full.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var uploader = new plupload.Uploader({
+                runtimes: 'html5,flash,silverlight,html4',
+                browse_button: 'pickfiles', // you can pass in id...
+                container: document.getElementById('container'), // ... or DOM Element itself
+                url: 'pluploadHandler.ashx',
+                flash_swf_url: 'lib/plupload/Moxie.swf',
+                silverlight_xap_url: 'lib/plupload/Moxie.xap',
+
+                filters: {
+                    max_file_size: '10mb',
+                    mime_types: [
+                        { title: "Image files", extensions: "jpg,gif,png" },
+                        { title: "Zip files", extensions: "zip" }
+                    ]
+                },
+
+                multipart_params: {
+                    one: '1',
+                    two: '2',
+                    three: '3',
+                    object: {
+                        four: '4',
+                        five: '5'
+                    },
+                    array: ['6', '7', '8']
+                },
+
+                init: {
+                    PostInit: function () {
+                        document.getElementById('filelist').innerHTML = '';
+
+                        document.getElementById('uploadfiles').onclick = function () {
+                            uploader.start();
+                            return false;
+                        };
+                    },
+
+                    FilesAdded: function (up, files) {
+                        plupload.each(files, function (file) {
+                            document.getElementById('filelist').innerHTML += '<div id="' + file.id + '">' + file.name + ' (' + plupload.formatSize(file.size) + ') <b></b></div>';
+                        });
+                    },
+
+                    FileUploaded: function (up, file, ret) {
+                        debugger;
+                    },
+
+                    UploadProgress: function (up, file) {
+                        document.getElementById(file.id).getElementsByTagName('b')[0].innerHTML = '<span>' + file.percent + "%</span>";
+                    },
+
+                    Error: function (up, err) {
+                        document.getElementById('console').innerHTML += "\nError #" + err.code + ": " + err.message;
+                    }
+                }
+            });
+
+            uploader.init();
+        });
+    </script>
+
+</head>
+<body>
+    <h1>Custom example</h1>
+
+    <p>Shows you how to use the core plupload API.</p>
+
+    <div id="filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
+    <br />
+
+    <div id="container">
+        <a id="pickfiles" href="javascript:;">[Select files]</a>
+        <a id="uploadfiles" href="javascript:;">[Upload files]</a>
+    </div>
+
+    <br />
+    <pre id="console"></pre>
+</body>
+</html>

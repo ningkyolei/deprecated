@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+    <link href="lib/bootstrap-3.0.3/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/jquery.json-2.4.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/juicer-min.js"></script>
+    <script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var blockWidth = parseInt($('.block').css('width').replace('px', ''));
+            var count = $('.block').length;
+
+            var pageIndex = 0;
+            var deltaMarginLeft = -1 * blockWidth;
+
+            $('#btn-right').click(function () {
+                var $scrollWidthContainer = $('.scroll-width-container');
+
+                if (pageIndex === (count - 1)) {//如果为最一页
+                    pageIndex = 0;
+                } else {
+                    pageIndex = (pageIndex + 1) % count;
+                }
+
+                var marginLeft = pageIndex * deltaMarginLeft;
+
+                $scrollWidthContainer.animate({
+                            marginLeft: marginLeft
+                        },
+                        'slow')
+            });
+
+            $('#btn-left').click(function () {
+                var $scrollWidthContainer = $('.scroll-width-container');
+
+                if (pageIndex === 0) {//如果当前为第1页
+                    pageIndex = count - 1;
+                } else {
+                    pageIndex = (pageIndex - 1) % count;
+                }
+
+                var marginLeft = pageIndex * deltaMarginLeft;
+
+                $scrollWidthContainer.animate({
+                            marginLeft: marginLeft
+                        },
+                        'slow')
+            });
+        });
+    </script>
+
+    <style>
+        [class*="bg-"] {
+            opacity: 0.7;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-yellow {
+            background-color: #ffff00;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .block {
+            width: 300px;
+            height: 200px;
+            float: left;
+        }
+
+        .scroll-width-container {
+            width: 900px; /* 900=300*3 */
+            position: relative;
+        }
+
+        .scroll-container {
+            width: 300px; /* 跟.block的width一样*/
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div id="btn-left" class="btn btn-primary"> <<</div>
+    <div id="btn-right" class="btn btn-primary"> >></div>
+</div>
+
+<div class="container">
+    <div class="scroll-container">
+        <div class="scroll-width-container">
+            <div class="bg-red block"></div>
+            <div class="bg-yellow block"></div>
+            <div class="bg-green block"></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

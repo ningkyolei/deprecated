@@ -1,0 +1,7 @@
+D:\Projects\测试项目\测试创建单元测试\UnitTest\bin\Debug\UnitTest.dll
+D:\Projects\测试项目\测试创建单元测试\UnitTest\bin\Debug\UnitTest.pdb
+D:\Projects\测试项目\测试创建单元测试\UnitTest\bin\Debug\Lib.dll
+D:\Projects\测试项目\测试创建单元测试\UnitTest\bin\Debug\Lib.pdb
+D:\Projects\测试项目\测试创建单元测试\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+D:\Projects\测试项目\测试创建单元测试\UnitTest\obj\Debug\UnitTest.dll
+D:\Projects\测试项目\测试创建单元测试\UnitTest\obj\Debug\UnitTest.pdb

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RegularExpressionTester</title>
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="RegularExpressionTester.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <label class="input-lg">Your regular expression:</label>
+        </div>
+    </div>
+
+    <div class="row row-reg-text">
+
+        <div class="col-lg-1 label1">
+            <label class="input-lg">/</label>
+        </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <input class="reg-text input-lg col-lg-12" type="text" value="0123(a.*?b)">
+            </div>
+        </div>
+        <div class="col-lg-1 label2">
+            <label class="input-lg">/</label>
+        </div>
+        <div class="col-lg-1">
+            <div class="row">
+                <input class="reg-attr input-lg col-lg-12" type="text" value="g">
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <input type="button" value="测试" class="btn btn-primary input-lg btnRegExec">
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <label class="input-lg">Your test string:</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <textarea class="input-text input-lg col-lg-12">0123a1b0123a2b0123a3b0123ab</textarea>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label class="input-lg">Match result:</label>
+        </div>
+        <div class="col-md-6">
+            <label class="input-lg">Match groups:</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-match-result">
+                    Match result here...
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body panel-match-groups">
+                    Match groups here...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+
+</div>
+
+<script src="lib/jquery-2.0.3.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="RegularExpressionTester.js"></script>
+</body>
+</html>
